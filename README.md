@@ -253,6 +253,7 @@ int main() {
 }
 ```
 ## Output:
+![Screenshot 2025-04-25 134755](https://github.com/user-attachments/assets/97838551-f920-41d9-8b46-77c42ff70a10)
 
 ## Result:
  Thus, the program is verified successfully.
