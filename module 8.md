@@ -106,8 +106,61 @@ Free the memory allocated for each string in s Free the memory allocated for s
 7.	End
  
 ## Program:
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+int compare(const void *a, const void *b) {
+    return strcmp(*(const char **)a, *(const char **)b);
+}
+
+void permute(char *str, int l, int r) {
+    if (l == r) {
+        printf("%s\n", str);
+    } else {
+        for (int i = l; i <= r; i++) {
+            char temp = str[l];
+            str[l] = str[i];
+            str[i] = temp;
+
+            permute(str, l + 1, r);
+
+            temp = str[l];
+            str[l] = str[i];
+            str[i] = temp;
+        }
+    }
+}
+
+int main() {
+    int n;
+    printf("Enter the number of strings: ");
+    scanf("%d", &n);
+
+    char **s = (char **)malloc(n * sizeof(char *));
+    printf("Enter the strings:\n");
+    for (int i = 0; i < n; i++) {
+        s[i] = (char *)malloc(100 * sizeof(char));
+        scanf("%s", s[i]);
+    }
+
+    qsort(s, n, sizeof(char *), compare);
+
+    for (int i = 0; i < n; i++) {
+        permute(s[i], 0, strlen(s[i]) - 1);
+    }
+
+    for (int i = 0; i < n; i++) {
+        free(s[i]);
+    }
+    free(s);
+
+    return 0;
+}
+```
 ## Output:
+![image](https://github.com/user-attachments/assets/94b02a3d-9c6d-4d9c-88a6-00a88ed4615b)
 
 ## Result:
 Thus, the program is verified successfully
