@@ -83,6 +83,7 @@ int main() {
 
 ```
 ## Output:
+![Screenshot 2025-05-02 110342](https://github.com/user-attachments/assets/3aaf0a05-620a-4c1b-ab3f-2ccf38d10c04)
 
 ## Result:
 Thus, the program to print the maximum values for the AND, OR and XOR comparisons
@@ -174,6 +175,7 @@ To write a C program print the sum of the integers in the array.
 
 
 ## Program:
+```
 #include<stdio.h>
 int main()
 {
@@ -190,6 +192,7 @@ int main()
     printf("Sum is %d",sum);
     
 }
+```
 ## Output:
 ![image](https://github.com/user-attachments/assets/894d3f34-f7b9-4a71-a4e8-35950af4fcdf)
 
